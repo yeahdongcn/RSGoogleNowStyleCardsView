@@ -11,6 +11,26 @@
 #import "RSSimpleCardView.h"
 #import "RSCardsView.h"
 
+@interface RSProfileCard : RSSimpleCard
+@end
+@implementation RSProfileCard
+@end
+
+@interface RSProjectCard : RSSimpleCard
+@end
+@implementation RSProjectCard
+@end
+
+@interface RSProfileCardView : RSSimpleCardView
+@end
+@implementation RSProfileCardView
+@end
+
+@interface RSProjectCardView : RSSimpleCardView
+@end
+@implementation RSProjectCardView
+@end
+
 @interface RSViewController () <RSCardsViewDataSource, RSCardsViewDelegate>
 {
     NSMutableArray *_data;
@@ -24,8 +44,8 @@
 
 - (NSMutableArray *)data {
     if (!_data) {
-        NSMutableArray *profiles = [NSMutableArray arrayWithObjects:@"First Name: Xiaodong", @"Last Name: Ye", @"Nick Name: R0CKSTAR", nil];
-        NSMutableArray *projects = [NSMutableArray arrayWithObjects:@"Baidu Video", @"Baidu Wallpaper", @"Baidu Wenku", nil];
+        NSMutableArray *profiles = [NSMutableArray arrayWithObjects:[[[RSProfileCard alloc] initWithText:@"First Name: Xiaodong"] autorelease], [[[RSProfileCard alloc] initWithText:@"Last Name: Ye"] autorelease], [[[RSProfileCard alloc] initWithText:@"Nick Name: R0CKSTAR"] autorelease], nil];
+        NSMutableArray *projects = [NSMutableArray arrayWithObjects:[[[RSProjectCard alloc] initWithText:@"Baidu Video"] autorelease], [[[RSProjectCard alloc] initWithText:@"Baidu Wallpaper"] autorelease], [[[RSProjectCard alloc] initWithText:@"Baidu Wenku"] autorelease], nil];
         _data = [[NSMutableArray arrayWithObjects:profiles, projects, nil] retain];
     }
     
@@ -40,7 +60,6 @@
     view.delegate = self;
     view.dataSource = self;
     view.animationStyle = RSCardsViewAnimationStyleExchange;
-    [view setNeedsReload];
     self.view = view;
 }
 
@@ -48,6 +67,32 @@
     [super viewDidLoad];
     
     // Do any additional setup after loading the view, typically from a nib.
+#warning Different loadings
+    
+    if (0) {
+        [(RSCardsView *)self.view setNeedsReload];
+    } else {
+        for (int i = 0; i < [[self data] count]; i++) {
+            for (int j = 0; j < [[self data][i] count]; j++) {
+                RSSimpleCardView *cardView = nil;
+                
+                if (i == 0) {
+                    cardView = [[[RSProfileCardView alloc] initWithFrame:self.view.bounds] autorelease];
+                } else {
+                    cardView = [[[RSProjectCardView alloc] initWithFrame:self.view.bounds] autorelease];
+                }
+                
+                RSSimpleCard *card = [self data][i][j];
+                cardView.delegate = (RSCardsView *)self.view;
+                [cardView setText:[card text]];
+                [cardView setContentViewHeight:[[card class] contentHeight] animated:NO];
+                [cardView setSettingsViewHeight:[[card class] settingsHeight]];
+                [cardView setNeedsLayout];
+                
+                [(RSCardsView *)self.view insertCard : cardView];
+            }
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -72,8 +117,9 @@
 }
 
 - (RSCardView *)cardsView:(RSCardsView *)cardsView cardForRowAtIndexPath:(NSIndexPath *)indexPath {
-    RSSimpleCard *card = [[[RSSimpleCard alloc] initWithText:[self data][indexPath.section][indexPath.row]] autorelease];
     RSSimpleCardView *cardView = [[[RSSimpleCardView alloc] initWithFrame:self.view.bounds] autorelease];
+    
+    RSSimpleCard *card = [self data][[indexPath section]][[indexPath row]];
     
     cardView.delegate = cardsView;
     [cardView setText:[card text]];
@@ -99,7 +145,7 @@
 }
 
 - (CGFloat)heightForCoveredRowInCardsView:(RSCardsView *)cardsView {
-    return 40;
+    return 80;
 }
 
 - (void)cardViewDidRemoveAtIndexPath:(NSIndexPath *)indexPath {

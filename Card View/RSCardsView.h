@@ -68,4 +68,3 @@ typedef NS_ENUM (NSUInteger, RSCardsViewAnimationStyle) {
 - (void)insertCard:(RSCardView *)card;
 
 @end
-

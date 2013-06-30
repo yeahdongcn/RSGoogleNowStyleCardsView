@@ -110,7 +110,7 @@ static const int kContentViewShadowRadius = 2;
                 [_delegate didTapOnCard:self];
             }
             
-            _delayedOpeningSettings = YES;
+            _shouldOpenSettingsLater = YES;
         }
     }
 }
@@ -151,7 +151,9 @@ static const int kContentViewShadowRadius = 2;
         [self addSubview:_contentView];
         
         _settingsButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_settingsButton setImage:[UIImage imageNamed:@"settings"] forState:UIControlStateNormal];
         [_settingsButton addTarget:self action:@selector(settingsButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+        [_settingsButton sizeToFit];
         [_contentView addSubview:_settingsButton];
         
         _panGestureRecognizer = [[[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGestureRecognizer:)] autorelease];
@@ -166,8 +168,13 @@ static const int kContentViewShadowRadius = 2;
     return self;
 }
 
-- (void)dealloc {
-    [super dealloc];
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
+    CGRect frame = _settingsButton.frame;
+    frame.origin.x = _contentView.bounds.size.width - frame.size.width - 5;
+    frame.origin.y = 5;
+    _settingsButton.frame = frame;
 }
 
 #pragma mark - Handle Gestures

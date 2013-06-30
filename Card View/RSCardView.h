@@ -45,8 +45,7 @@ typedef NS_ENUM (NSUInteger, RSCardViewSwipeDirection) {
 
 @property (assign, nonatomic) id <RSCardViewDelegate> delegate;
 
-#warning TODO: Change this name
-@property (assign, nonatomic) BOOL delayedOpeningSettings;
+@property (assign, nonatomic) BOOL shouldOpenSettingsLater;
 
 - (void)setContentViewHeight:(CGFloat)height animated:(BOOL)animated;
 

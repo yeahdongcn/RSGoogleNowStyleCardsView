@@ -25,6 +25,7 @@
 		D0F2B1DD1780570A002053BA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F2B1DC1780570A002053BA /* QuartzCore.framework */; };
 		D0F2B1E017805C19002053BA /* RSSimpleCard.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F2B1DF17805C19002053BA /* RSSimpleCard.m */; };
 		D0F2B1E317805C2A002053BA /* RSSimpleCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F2B1E217805C2A002053BA /* RSSimpleCardView.m */; };
+		D0F2B1E517806D0F002053BA /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0F2B1E417806D0F002053BA /* settings@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		D0F2B1DF17805C19002053BA /* RSSimpleCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSimpleCard.m; sourceTree = "<group>"; };
 		D0F2B1E117805C2A002053BA /* RSSimpleCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSimpleCardView.h; sourceTree = "<group>"; };
 		D0F2B1E217805C2A002053BA /* RSSimpleCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSimpleCardView.m; sourceTree = "<group>"; };
+		D0F2B1E417806D0F002053BA /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 		D0F2B1CC178051A3002053BA /* Card View */ = {
 			isa = PBXGroup;
 			children = (
+				D0F2B1E417806D0F002053BA /* settings@2x.png */,
 				D0F2B1CD178051A3002053BA /* RSCard.h */,
 				D0F2B1CE178051A3002053BA /* RSCard.m */,
 				D0F2B1CF178051A3002053BA /* RSCardsView.h */,
@@ -208,6 +211,7 @@
 				D0F2B1BC1780511E002053BA /* Default.png in Resources */,
 				D0F2B1BE1780511E002053BA /* Default@2x.png in Resources */,
 				D0F2B1C01780511E002053BA /* Default-568h@2x.png in Resources */,
+				D0F2B1E517806D0F002053BA /* settings@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

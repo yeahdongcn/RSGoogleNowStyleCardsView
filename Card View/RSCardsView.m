@@ -35,6 +35,7 @@ static NSTimeInterval const kRSAnimationDuration      = 0.35;
     if (!_insertQueue) {
         _insertQueue = [[NSMutableArray alloc] init];
     }
+    
     return _insertQueue;
 }
 
@@ -261,18 +262,17 @@ static const int kSectionSpan = 100;
 
 #pragma mark - Private : animation related
 
-- (void)sortZPositionInSection:(int)section shouldReset:(BOOL)shouldReset
-{
+- (void)sortZPositionInSection:(int)section shouldReset:(BOOL)shouldReset {
     for (int row = 0; row <= [self lastRowInSection:section]; row++) {
         RSCardView *card = [self cardForIndexPath:[NSIndexPath indexPathForRow:row inSection:section]];
         card.layer.zPosition = shouldReset ? 0 : row;
     }
 }
 
-- (void)foldInSection:(int)section
-{
+- (void)foldInSection:(int)section {
     for (int row = 0; row <= [self lastRowInSection:section]; row++) {
         RSCardView *card = [self cardForIndexPath:[NSIndexPath indexPathForRow:row inSection:section]];
+        
         if ([card isSettingsVisible]) {
             [card toggleSettings];
         }
@@ -289,7 +289,8 @@ static const int kSectionSpan = 100;
         if (self.delegate && [self.delegate respondsToSelector:@selector(cardViewWillExchangeAtIndexPath:withIndexPath:)]) {
             [self.delegate
              cardViewWillExchangeAtIndexPath:[self indexPathForCard:card]
-             withIndexPath:[NSIndexPath indexPathForRow:[self lastRowInSection:section] inSection:section]];
+             withIndexPath:[NSIndexPath indexPathForRow:[self lastRowInSection:section]
+                                              inSection:section]];
         }
         
         [self exchangeAnimationScale:card];
@@ -308,7 +309,8 @@ static const int kSectionSpan = 100;
             int section = [self sectionForCard:card];
             [self.delegate
              cardViewDidExchangeAtIndexPath:[self indexPathForCard:card]
-             withIndexPath:[NSIndexPath indexPathForRow:[self lastRowInSection:section] inSection:section]];
+             withIndexPath:[NSIndexPath indexPathForRow:[self lastRowInSection:section]
+                                              inSection:section]];
         }
     } else if (_animationStyle == RSCardsViewAnimationStyleDrop) {
         if (self.delegate && [self.delegate respondsToSelector:@selector(cardViewDidDropAtIndexPath:)]) {
@@ -383,11 +385,14 @@ static const int kSectionSpan = 100;
     int tag = lastCard.tag;
     
     RSCardView *firstCard = nil;
+    
     for (int row = [self rowForCard:card] + 1; row <= [self lastRowInSection:section]; row++) {
         RSCardView *c = [self cardForIndexPath:[NSIndexPath indexPathForRow:row inSection:section]];
+        
         if (!firstCard) {
             firstCard = c;
         }
+        
         c.tag -= 1;
     }
     
@@ -402,9 +407,9 @@ static const int kSectionSpan = 100;
     card.layer.transform = CATransform3DIdentity;
     [card.layer addAnimation:animation forKey:@"scale"];
     
-    if (card.delayedOpeningSettings) {
+    if (card.shouldOpenSettingsLater) {
         [card toggleSettings];
-        card.delayedOpeningSettings = NO;
+        card.shouldOpenSettingsLater = NO;
     }
     
     [self performSelector:@selector(animationDidFinish:) withObject:firstCard afterDelay:kRSAnimationDuration];
@@ -500,9 +505,9 @@ static const int kSectionSpan = 100;
     lastCard.layer.transform = CATransform3DIdentity;
     [lastCard.layer addAnimation:animation forKey:@"scale"];
     
-    if (card.delayedOpeningSettings) {
+    if (card.shouldOpenSettingsLater) {
         [card toggleSettings];
-        card.delayedOpeningSettings = NO;
+        card.shouldOpenSettingsLater = NO;
     }
     
     [self performSelector:@selector(animationDidFinish:) withObject:lastCard afterDelay:kRSAnimationDuration];
@@ -561,11 +566,14 @@ static const int kSectionSpan = 100;
     
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wobjc-method-access"
+    
     if ([cardClass shouldInsertInSection]) {
 #pragma clang diagnostic pop
+        
         for (int section = 0; section <= [self lastSection]; section++) {
             for (int row = 0; row <= [self lastRowInSection:section]; row++) {
                 RSCardView *c = [self cardForIndexPath:[NSIndexPath indexPathForRow:row inSection:section]];
+                
                 if ([card isKindOfClass:[c class]]) {
                     int r = [self lastRowInSection:section] + 1;
                     card.tag = kTagBase + kSectionSpan * section + r;
@@ -584,6 +592,7 @@ static const int kSectionSpan = 100;
             [self indexPaths][section][row] = [NSIndexPath indexPathForRow:row inSection:section + 1];
         }
     }
+    
     NSMutableArray *section = [NSMutableArray arrayWithCapacity:1];
     [section addObject:[NSIndexPath indexPathForRow:0 inSection:0]];
     [[self indexPaths] insertObject:section atIndex:0];
@@ -615,12 +624,14 @@ Animation:
 - (BOOL)canToggleSettings:(RSCardView *)card {
     int section = [self sectionForCard:card];
     RSCardView *lastCard = [self cardForIndexPath:[NSIndexPath indexPathForRow:[self lastRowInSection:section] inSection:section]];
+    
     return lastCard == card;
 }
 
 - (void)didTapOnCard:(RSCardView *)card {
     int section = [self sectionForCard:card];
     RSCardView *lastCard = [self cardForIndexPath:[NSIndexPath indexPathForRow:[self lastRowInSection:section] inSection:section]];
+    
     if (card != lastCard) {
         [self animationWillStart:card];
     }
@@ -638,6 +649,7 @@ Animation:
     [[self indexPaths][indexPath.section] removeObjectAtIndex:indexPath.row];
     
     int section = [self sectionForCard:card];
+    
     if ([self lastRowInSection:section] >= 0) {
         for (int i = [self rowForCard:card]; i <= [self lastRowInSection:section]; i++) {
             NSIndexPath *indexPath = [self indexPaths][section][i];
@@ -646,6 +658,7 @@ Animation:
         }
     } else {
         [[self indexPaths] removeObjectAtIndex:section];
+        
         for (int i = section; i <= [self lastSection]; i++) {
             for (int j = 0; j <= [self lastRowInSection:section]; j++) {
                 NSIndexPath *indexPath = [self indexPaths][i][j];
