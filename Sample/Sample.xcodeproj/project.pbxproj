@@ -1,0 +1,348 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D0F2B1AA1780511E002053BA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F2B1A91780511E002053BA /* UIKit.framework */; };
+		D0F2B1AC1780511E002053BA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F2B1AB1780511E002053BA /* Foundation.framework */; };
+		D0F2B1AE1780511E002053BA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F2B1AD1780511E002053BA /* CoreGraphics.framework */; };
+		D0F2B1B41780511E002053BA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0F2B1B21780511E002053BA /* InfoPlist.strings */; };
+		D0F2B1B61780511E002053BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F2B1B51780511E002053BA /* main.m */; };
+		D0F2B1BA1780511E002053BA /* RSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F2B1B91780511E002053BA /* RSAppDelegate.m */; };
+		D0F2B1BC1780511E002053BA /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D0F2B1BB1780511E002053BA /* Default.png */; };
+		D0F2B1BE1780511E002053BA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0F2B1BD1780511E002053BA /* Default@2x.png */; };
+		D0F2B1C01780511E002053BA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0F2B1BF1780511E002053BA /* Default-568h@2x.png */; };
+		D0F2B1C31780511E002053BA /* RSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F2B1C21780511E002053BA /* RSViewController.m */; };
+		D0F2B1D7178051A3002053BA /* RSCard.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F2B1CE178051A3002053BA /* RSCard.m */; };
+		D0F2B1D8178051A3002053BA /* RSCardsView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F2B1D0178051A3002053BA /* RSCardsView.m */; };
+		D0F2B1D9178051A3002053BA /* RSCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F2B1D2178051A3002053BA /* RSCardView.m */; };
+		D0F2B1DA178051A3002053BA /* UIColor+Expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F2B1D4178051A3002053BA /* UIColor+Expanded.m */; };
+		D0F2B1DB178051A3002053BA /* UIView+Folding.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F2B1D6178051A3002053BA /* UIView+Folding.m */; };
+		D0F2B1DD1780570A002053BA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F2B1DC1780570A002053BA /* QuartzCore.framework */; };
+		D0F2B1E017805C19002053BA /* RSSimpleCard.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F2B1DF17805C19002053BA /* RSSimpleCard.m */; };
+		D0F2B1E317805C2A002053BA /* RSSimpleCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F2B1E217805C2A002053BA /* RSSimpleCardView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D0F2B1A61780511E002053BA /* Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0F2B1A91780511E002053BA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D0F2B1AB1780511E002053BA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D0F2B1AD1780511E002053BA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D0F2B1B11780511E002053BA /* Sample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Sample-Info.plist"; sourceTree = "<group>"; };
+		D0F2B1B31780511E002053BA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D0F2B1B51780511E002053BA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D0F2B1B71780511E002053BA /* Sample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sample-Prefix.pch"; sourceTree = "<group>"; };
+		D0F2B1B81780511E002053BA /* RSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSAppDelegate.h; sourceTree = "<group>"; };
+		D0F2B1B91780511E002053BA /* RSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSAppDelegate.m; sourceTree = "<group>"; };
+		D0F2B1BB1780511E002053BA /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		D0F2B1BD1780511E002053BA /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		D0F2B1BF1780511E002053BA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D0F2B1C11780511E002053BA /* RSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSViewController.h; sourceTree = "<group>"; };
+		D0F2B1C21780511E002053BA /* RSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSViewController.m; sourceTree = "<group>"; };
+		D0F2B1CD178051A3002053BA /* RSCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSCard.h; sourceTree = "<group>"; };
+		D0F2B1CE178051A3002053BA /* RSCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSCard.m; sourceTree = "<group>"; };
+		D0F2B1CF178051A3002053BA /* RSCardsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSCardsView.h; sourceTree = "<group>"; };
+		D0F2B1D0178051A3002053BA /* RSCardsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSCardsView.m; sourceTree = "<group>"; };
+		D0F2B1D1178051A3002053BA /* RSCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSCardView.h; sourceTree = "<group>"; };
+		D0F2B1D2178051A3002053BA /* RSCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSCardView.m; sourceTree = "<group>"; };
+		D0F2B1D3178051A3002053BA /* UIColor+Expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Expanded.h"; sourceTree = "<group>"; };
+		D0F2B1D4178051A3002053BA /* UIColor+Expanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Expanded.m"; sourceTree = "<group>"; };
+		D0F2B1D5178051A3002053BA /* UIView+Folding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Folding.h"; sourceTree = "<group>"; };
+		D0F2B1D6178051A3002053BA /* UIView+Folding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Folding.m"; sourceTree = "<group>"; };
+		D0F2B1DC1780570A002053BA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D0F2B1DE17805C19002053BA /* RSSimpleCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSimpleCard.h; sourceTree = "<group>"; };
+		D0F2B1DF17805C19002053BA /* RSSimpleCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSimpleCard.m; sourceTree = "<group>"; };
+		D0F2B1E117805C2A002053BA /* RSSimpleCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSimpleCardView.h; sourceTree = "<group>"; };
+		D0F2B1E217805C2A002053BA /* RSSimpleCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSimpleCardView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D0F2B1A31780511E002053BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0F2B1DD1780570A002053BA /* QuartzCore.framework in Frameworks */,
+				D0F2B1AA1780511E002053BA /* UIKit.framework in Frameworks */,
+				D0F2B1AC1780511E002053BA /* Foundation.framework in Frameworks */,
+				D0F2B1AE1780511E002053BA /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D0F2B19D1780511E002053BA = {
+			isa = PBXGroup;
+			children = (
+				D0F2B1AF1780511E002053BA /* Sample */,
+				D0F2B1A81780511E002053BA /* Frameworks */,
+				D0F2B1A71780511E002053BA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D0F2B1A71780511E002053BA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D0F2B1A61780511E002053BA /* Sample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D0F2B1A81780511E002053BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D0F2B1DC1780570A002053BA /* QuartzCore.framework */,
+				D0F2B1A91780511E002053BA /* UIKit.framework */,
+				D0F2B1AB1780511E002053BA /* Foundation.framework */,
+				D0F2B1AD1780511E002053BA /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D0F2B1AF1780511E002053BA /* Sample */ = {
+			isa = PBXGroup;
+			children = (
+				D0F2B1CC178051A3002053BA /* Card View */,
+				D0F2B1B81780511E002053BA /* RSAppDelegate.h */,
+				D0F2B1B91780511E002053BA /* RSAppDelegate.m */,
+				D0F2B1C11780511E002053BA /* RSViewController.h */,
+				D0F2B1C21780511E002053BA /* RSViewController.m */,
+				D0F2B1DE17805C19002053BA /* RSSimpleCard.h */,
+				D0F2B1DF17805C19002053BA /* RSSimpleCard.m */,
+				D0F2B1E117805C2A002053BA /* RSSimpleCardView.h */,
+				D0F2B1E217805C2A002053BA /* RSSimpleCardView.m */,
+				D0F2B1B01780511E002053BA /* Supporting Files */,
+			);
+			path = Sample;
+			sourceTree = "<group>";
+		};
+		D0F2B1B01780511E002053BA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D0F2B1B11780511E002053BA /* Sample-Info.plist */,
+				D0F2B1B21780511E002053BA /* InfoPlist.strings */,
+				D0F2B1B51780511E002053BA /* main.m */,
+				D0F2B1B71780511E002053BA /* Sample-Prefix.pch */,
+				D0F2B1BB1780511E002053BA /* Default.png */,
+				D0F2B1BD1780511E002053BA /* Default@2x.png */,
+				D0F2B1BF1780511E002053BA /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D0F2B1CC178051A3002053BA /* Card View */ = {
+			isa = PBXGroup;
+			children = (
+				D0F2B1CD178051A3002053BA /* RSCard.h */,
+				D0F2B1CE178051A3002053BA /* RSCard.m */,
+				D0F2B1CF178051A3002053BA /* RSCardsView.h */,
+				D0F2B1D0178051A3002053BA /* RSCardsView.m */,
+				D0F2B1D1178051A3002053BA /* RSCardView.h */,
+				D0F2B1D2178051A3002053BA /* RSCardView.m */,
+				D0F2B1D3178051A3002053BA /* UIColor+Expanded.h */,
+				D0F2B1D4178051A3002053BA /* UIColor+Expanded.m */,
+				D0F2B1D5178051A3002053BA /* UIView+Folding.h */,
+				D0F2B1D6178051A3002053BA /* UIView+Folding.m */,
+			);
+			name = "Card View";
+			path = "../../Card View";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D0F2B1A51780511E002053BA /* Sample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0F2B1C91780511E002053BA /* Build configuration list for PBXNativeTarget "Sample" */;
+			buildPhases = (
+				D0F2B1A21780511E002053BA /* Sources */,
+				D0F2B1A31780511E002053BA /* Frameworks */,
+				D0F2B1A41780511E002053BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sample;
+			productName = Sample;
+			productReference = D0F2B1A61780511E002053BA /* Sample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D0F2B19E1780511E002053BA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = RS;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = P.D.Q.;
+			};
+			buildConfigurationList = D0F2B1A11780511E002053BA /* Build configuration list for PBXProject "Sample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D0F2B19D1780511E002053BA;
+			productRefGroup = D0F2B1A71780511E002053BA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D0F2B1A51780511E002053BA /* Sample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D0F2B1A41780511E002053BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0F2B1B41780511E002053BA /* InfoPlist.strings in Resources */,
+				D0F2B1BC1780511E002053BA /* Default.png in Resources */,
+				D0F2B1BE1780511E002053BA /* Default@2x.png in Resources */,
+				D0F2B1C01780511E002053BA /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D0F2B1A21780511E002053BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0F2B1B61780511E002053BA /* main.m in Sources */,
+				D0F2B1BA1780511E002053BA /* RSAppDelegate.m in Sources */,
+				D0F2B1C31780511E002053BA /* RSViewController.m in Sources */,
+				D0F2B1D7178051A3002053BA /* RSCard.m in Sources */,
+				D0F2B1D8178051A3002053BA /* RSCardsView.m in Sources */,
+				D0F2B1D9178051A3002053BA /* RSCardView.m in Sources */,
+				D0F2B1DA178051A3002053BA /* UIColor+Expanded.m in Sources */,
+				D0F2B1DB178051A3002053BA /* UIView+Folding.m in Sources */,
+				D0F2B1E017805C19002053BA /* RSSimpleCard.m in Sources */,
+				D0F2B1E317805C2A002053BA /* RSSimpleCardView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D0F2B1B21780511E002053BA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0F2B1B31780511E002053BA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D0F2B1C71780511E002053BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D0F2B1C81780511E002053BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D0F2B1CA1780511E002053BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sample/Sample-Prefix.pch";
+				INFOPLIST_FILE = "Sample/Sample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D0F2B1CB1780511E002053BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sample/Sample-Prefix.pch";
+				INFOPLIST_FILE = "Sample/Sample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D0F2B1A11780511E002053BA /* Build configuration list for PBXProject "Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0F2B1C71780511E002053BA /* Debug */,
+				D0F2B1C81780511E002053BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0F2B1C91780511E002053BA /* Build configuration list for PBXNativeTarget "Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0F2B1CA1780511E002053BA /* Debug */,
+				D0F2B1CB1780511E002053BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D0F2B19E1780511E002053BA /* Project object */;
+}
