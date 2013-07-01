@@ -68,7 +68,6 @@
 
 - (void)loadView {
     RSCardsView *view = [[[RSCardsView alloc] initWithFrame:[UIScreen mainScreen].applicationFrame] autorelease];
-    
     view.delegate = self;
     view.dataSource = self;
     view.animationStyle = RSCardsViewAnimationStyleExchange;
