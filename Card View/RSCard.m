@@ -10,10 +10,6 @@
 
 @implementation RSCard
 
-- (void)dealloc {
-    [super dealloc];
-}
-
 + (BOOL)isUserLocationRequired {
     return NO;
 }

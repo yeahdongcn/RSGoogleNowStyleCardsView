@@ -14,6 +14,11 @@
 @interface RSProfileCard : RSSimpleCard
 @end
 @implementation RSProfileCard
+
++ (CGFloat)contentHeight {
+    return 80;
+}
+
 @end
 
 @interface RSProjectCard : RSSimpleCard
@@ -44,8 +49,15 @@
 
 - (NSMutableArray *)data {
     if (!_data) {
-        NSMutableArray *profiles = [NSMutableArray arrayWithObjects:[[[RSProfileCard alloc] initWithText:@"First Name: Xiaodong"] autorelease], [[[RSProfileCard alloc] initWithText:@"Last Name: Ye"] autorelease], [[[RSProfileCard alloc] initWithText:@"Nick Name: R0CKSTAR"] autorelease], nil];
-        NSMutableArray *projects = [NSMutableArray arrayWithObjects:[[[RSProjectCard alloc] initWithText:@"Baidu Video"] autorelease], [[[RSProjectCard alloc] initWithText:@"Baidu Wallpaper"] autorelease], [[[RSProjectCard alloc] initWithText:@"Baidu Wenku"] autorelease], nil];
+        NSMutableArray *profiles = [NSMutableArray arrayWithObjects:
+                                    [[[RSProfileCard alloc] initWithText:@"First Name: Xiaodong\nLast Name: Ye\nNick Name: R0CKSTAR\nGender: Male"] autorelease],
+                                    [[[RSProfileCard alloc] initWithText:@"Education\n2004.9-2008.6 Department of Computer Science and Technology, Communication University of China"] autorelease],
+                                    [[[RSProfileCard alloc] initWithText:@"+8618600670934\nMail: yeahdongcn@gmail.com"] autorelease], nil];
+        NSMutableArray *projects = [NSMutableArray arrayWithObjects:
+                                    [[[RSProjectCard alloc] initWithText:@"Work Experience (iOS)\nMultiple Apps for Baidu including video streaming app, knowledge and trips sharing app, news app, wallpaper app, reader app, etc."] autorelease],
+                                    [[[RSProjectCard alloc] initWithText:@"Work Experience (WP7/8)\nMultiple Apps for Nokia including RSS reader, health monitoring app, weather app, simple apps for Teleric and Infragistics controls, etc. Maps for Badiu on WP7/8."] autorelease],
+                                    [[[RSProjectCard alloc] initWithText:@"Work Experience (Meego)\nBuilt drivers for Nokia Bluetooth headset. Implemented springboard alike launcher (Qt/Qml) for Linux based embeded system."] autorelease],
+                                    [[[RSProjectCard alloc] initWithText:@"Work Experience (Symbian)\nWork as Nokia external for maintaining Symbian S60 build-in software, including IM, Phonebook, Video telephony, VOIP, UMA, Speed-dial, Notes, Calculator and etc. Ported Symbian Open Source Project to beagleboard alike product and implemented the drivers for calling and messaging."] autorelease], nil];
         _data = [[NSMutableArray arrayWithObjects:profiles, projects, nil] retain];
     }
     
@@ -67,8 +79,6 @@
     [super viewDidLoad];
     
     // Do any additional setup after loading the view, typically from a nib.
-#warning Different loadings
-    
     if (0) {
         [(RSCardsView *)self.view setNeedsReload];
     } else {
@@ -92,6 +102,12 @@
                 [(RSCardsView *)self.view insertCard : cardView];
             }
         }
+        
+        id o = [self data][0];
+        [o retain];
+        [[self data] removeObjectAtIndex:0];
+        [[self data] addObject:o];
+        [o release];
     }
 }
 
@@ -145,7 +161,7 @@
 }
 
 - (CGFloat)heightForCoveredRowInCardsView:(RSCardsView *)cardsView {
-    return 80;
+    return 60;
 }
 
 - (void)cardViewDidRemoveAtIndexPath:(NSIndexPath *)indexPath {

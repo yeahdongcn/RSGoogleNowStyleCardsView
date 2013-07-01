@@ -26,10 +26,13 @@ static NSTimeInterval const kRSAnimationDuration      = 0.35;
 
 @implementation RSCardsView
 
+static const int kTagBase = NSIntegerMax / 10 * 10;
+static const int kSectionSpan = 100;
+
 @synthesize delegate = __delegate;
 @synthesize dataSource = __dataSource;
 
-#pragma mark - Getters
+#pragma mark - Private: getters
 
 - (NSMutableArray *)insertQueue {
     if (!_insertQueue) {
@@ -47,6 +50,8 @@ static NSTimeInterval const kRSAnimationDuration      = 0.35;
     return _indexPaths;
 }
 
+#pragma mark - Private: insert queued card
+
 - (void)insertQueuedCard {
     if ([self insertQueue].count > 0) {
         [self insertCard:[self insertQueue][0]];
@@ -54,8 +59,7 @@ static NSTimeInterval const kRSAnimationDuration      = 0.35;
     }
 }
 
-static const int kTagBase = NSIntegerMax / 10 * 10;
-static const int kSectionSpan = 100;
+#pragma mark - Private: card <-> index path
 
 - (int)rowForCard:(RSCardView *)card {
     return (card.tag - kTagBase) % kSectionSpan;
