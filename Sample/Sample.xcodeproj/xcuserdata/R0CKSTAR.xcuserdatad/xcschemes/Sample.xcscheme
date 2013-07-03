@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D0F2B1A51780511E002053BA"
-               BuildableName = "Sample.app"
+               BuildableName = "Google Now Style Card View Sample.app"
                BlueprintName = "Sample"
                ReferencedContainer = "container:Sample.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D0F2B1A51780511E002053BA"
-            BuildableName = "Sample.app"
+            BuildableName = "Google Now Style Card View Sample.app"
             BlueprintName = "Sample"
             ReferencedContainer = "container:Sample.xcodeproj">
          </BuildableReference>
@@ -52,7 +52,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D0F2B1A51780511E002053BA"
-            BuildableName = "Sample.app"
+            BuildableName = "Google Now Style Card View Sample.app"
             BlueprintName = "Sample"
             ReferencedContainer = "container:Sample.xcodeproj">
          </BuildableReference>
@@ -70,7 +70,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D0F2B1A51780511E002053BA"
-            BuildableName = "Sample.app"
+            BuildableName = "Google Now Style Card View Sample.app"
             BlueprintName = "Sample"
             ReferencedContainer = "container:Sample.xcodeproj">
          </BuildableReference>

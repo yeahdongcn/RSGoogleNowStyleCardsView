@@ -29,7 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D0F2B1A61780511E002053BA /* Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0F2B1A61780511E002053BA /* Google Now Style Card View Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Google Now Style Card View Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F2B1A91780511E002053BA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D0F2B1AB1780511E002053BA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D0F2B1AD1780511E002053BA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -89,7 +89,7 @@
 		D0F2B1A71780511E002053BA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D0F2B1A61780511E002053BA /* Sample.app */,
+				D0F2B1A61780511E002053BA /* Google Now Style Card View Sample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -172,7 +172,7 @@
 			);
 			name = Sample;
 			productName = Sample;
-			productReference = D0F2B1A61780511E002053BA /* Sample.app */;
+			productReference = D0F2B1A61780511E002053BA /* Google Now Style Card View Sample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -309,7 +309,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sample/Sample-Prefix.pch";
 				INFOPLIST_FILE = "Sample/Sample-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Google Now Style Card View Sample";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -320,7 +320,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sample/Sample-Prefix.pch";
 				INFOPLIST_FILE = "Sample/Sample-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Google Now Style Card View Sample";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
