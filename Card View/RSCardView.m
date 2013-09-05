@@ -127,7 +127,7 @@ static const int kContentViewShadowRadius = 2;
         
         _settingsView = [[[UIView alloc] initWithFrame:CGRectMake(kContentViewMargin.left, 0, self.bounds.size.width - kContentViewMargin.left - kContentViewMargin.right, 0)] autorelease];
         _settingsView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-        _settingsView.backgroundColor = [UIColor blackColor];
+        _settingsView.backgroundColor = [UIColor lightGrayColor];
         _settingsView.hidden = YES;
         [self addSubview:_settingsView];
         
@@ -151,7 +151,7 @@ static const int kContentViewShadowRadius = 2;
         [self addSubview:_contentView];
         
         _settingsButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_settingsButton setImage:[UIImage imageNamed:@"settings"] forState:UIControlStateNormal];
+        [_settingsButton setImage:[UIImage imageNamed:@"Settings"] forState:UIControlStateNormal];
         [_settingsButton addTarget:self action:@selector(settingsButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         [_settingsButton sizeToFit];
         [_contentView addSubview:_settingsButton];

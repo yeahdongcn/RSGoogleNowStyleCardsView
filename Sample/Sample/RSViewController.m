@@ -50,14 +50,14 @@
 - (NSMutableArray *)data {
     if (!_data) {
         NSMutableArray *profiles = [NSMutableArray arrayWithObjects:
-                                    [[[RSProfileCard alloc] initWithText:@"First Name: Xiaodong\nLast Name: Ye\nNick Name: R0CKSTAR\nGender: Male"] autorelease],
-                                    [[[RSProfileCard alloc] initWithText:@"Education\n2004.9-2008.6 Department of Computer Science and Technology, Communication University of China"] autorelease],
-                                    [[[RSProfileCard alloc] initWithText:@"+8618600670934\nMail: yeahdongcn@gmail.com"] autorelease], nil];
+                                    [[[RSProfileCard alloc] initWithText:nil] autorelease],
+                                    [[[RSProfileCard alloc] initWithText:nil] autorelease],
+                                    [[[RSProfileCard alloc] initWithText:nil] autorelease], nil];
         NSMutableArray *projects = [NSMutableArray arrayWithObjects:
-                                    [[[RSProjectCard alloc] initWithText:@"Work Experience (iOS)\nMultiple Apps for Baidu including video streaming app, knowledge and trips sharing app, news app, wallpaper app, reader app, etc."] autorelease],
-                                    [[[RSProjectCard alloc] initWithText:@"Work Experience (WP7/8)\nMultiple Apps for Nokia including RSS reader, health monitoring app, weather app, simple apps for Teleric and Infragistics controls, etc. Maps for Badiu on WP7/8."] autorelease],
-                                    [[[RSProjectCard alloc] initWithText:@"Work Experience (Meego)\nBuilt drivers for Nokia Bluetooth headset. Implemented springboard alike launcher (Qt/Qml) for Linux based embeded system."] autorelease],
-                                    [[[RSProjectCard alloc] initWithText:@"Work Experience (Symbian)\nWork as Nokia external for maintaining Symbian S60 build-in software, including IM, Phonebook, Video telephony, VOIP, UMA, Speed-dial, Notes, Calculator and etc. Ported Symbian Open Source Project to beagleboard alike product and implemented the drivers for calling and messaging."] autorelease], nil];
+                                    [[[RSProjectCard alloc] initWithText:nil] autorelease],
+                                    [[[RSProjectCard alloc] initWithText:nil] autorelease],
+                                    [[[RSProjectCard alloc] initWithText:nil] autorelease],
+                                    [[[RSProjectCard alloc] initWithText:nil] autorelease], nil];
         _data = [[NSMutableArray arrayWithObjects:profiles, projects, nil] retain];
     }
     
