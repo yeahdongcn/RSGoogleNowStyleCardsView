@@ -18,3 +18,7 @@ Add 'Card View' (Dir) to your project and start to use RSCardsView.
 You should implement your own card and card view, open sample to see lot more.
 
 [![ScreenShot](https://raw.github.com/GabLeRoux/WebMole/master/ressources/WebMole_Youtube_Video.png)](http://v.youku.com/v_show/id_XNTc4MDUyODY0.html)
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/yeahdongcn/google-now-style-card-view/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
