@@ -22,3 +22,7 @@ You should implement your own card and card view, open sample to see lot more.
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/yeahdongcn/google-now-style-card-view/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/yeahdongcn/rsgooglenowstylecardsview/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
